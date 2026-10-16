@@ -1,166 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A Surprise for My Fav Sis 💗</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Surprise for My Fav Sis 💗</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      padding: 20px;
-      display: grid;
-      place-items: center;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: linear-gradient(135deg, #ffe0ed, #e8ddff);
-      color: #803b62;
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #ffe0ed, #e8ddff);
+  color: #803b62;
+}
 
-    .card,
-    #surprise {
-      width: 100%;
-      padding: 30px 20px;
-      border-radius: 25px;
-      background: white;
-      box-shadow: 0 10px 40px #c77aa755;
-    }
+.card,
+#surprise {
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 10px 40px #c77aa755;
+}
 
-    .card {
-      max-width: 450px;
-    }
+.card {
+  max-width: 450px;
+}
 
-    #surprise {
-      max-width: 600px;
-    }
+#surprise {
+  max-width: 600px;
+}
 
-    .emoji {
-      font-size: 65px;
-    }
+.emoji {
+  font-size: 65px;
+}
 
-    h1 {
-      color: #e65391;
-    }
+h1 {
+  color: #e65391;
+}
 
-    button {
-      border: 0;
-      padding: 15px 22px;
-      border-radius: 30px;
-      background: #f05b9d;
-      color: white;
-      font-size: 17px;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
+button {
+  border: 0;
+  padding: 15px 22px;
+  border-radius: 30px;
+  background: #f05b9d;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
 
-    button:hover {
-      background: #d83c82;
-      transform: scale(1.03);
-    }
+button:hover {
+  background: #d83c82;
+  transform: scale(1.03);
+}
 
-    button:focus-visible {
-      outline: 3px solid #803b62;
-      outline-offset: 4px;
-    }
+button:focus-visible {
+  outline: 3px solid #803b62;
+  outline-offset: 4px;
+}
 
-    .hidden {
-      display: none !important;
-    }
+.hidden {
+  display: none !important;
+}
 
-    .sister-photo {
-      display: block;
-      width: 100%;
-      max-width: 450px;
-      height: auto;
-      margin: 20px auto;
-      border-radius: 18px;
-    }
+.sister-photo {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 18px;
+}
 
-    .message {
-      font-size: 21px;
-      line-height: 1.7;
-      overflow-wrap: anywhere;
-    }
+.message {
+  font-size: 21px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
 
-    @media (max-width: 400px) {
-      .message {
-        font-size: 18px;
-      }
+@media (max-width: 400px) {
+  .message {
+    font-size: 18px;
+  }
 
-      .emoji {
-        font-size: 52px;
-      }
-    }
-  </style>
+  .emoji {
+    font-size: 52px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card" id="welcome">
-    <div class="emoji">🎀💗</div>
+<!-- Welcome screen -->
+<div class="card" id="welcome">
+  <div class="emoji">🎀💗</div>
 
-    <h1>Hey, sis! 🥹💕</h1>
+  <h1>Hey, sis! 🥹💕</h1>
 
-    <p>I made a tiny surprise just for you! 🌸💖</p>
-    <p>You HAVE to open it. No cheating! 🤭🎁</p>
+  <p>I made a tiny surprise just for you! 🌸💖</p>
+  <p>You HAVE to open it. No cheating! 🤭🎁</p>
 
-    <button type="button" onclick="showSurprise()">
-      Open your surprise 🎁💗
-    </button>
+  <button type="button" onclick="showSurprise()">
+    Open your surprise 🎁💗
+  </button>
 
-    <p>Made with love 💖✨</p>
-  </div>
+  <p>Made with love 💖✨</p>
+</div>
 
-  <div id="surprise" class="hidden">
-    <div class="emoji">💗🥹🫶🏻</div>
+<!-- Surprise screen -->
+<div id="surprise" class="hidden">
 
-    <h1>To My Favorite Sis 💕</h1>
+  <div class="emoji">💗🥹🫶🏻</div>
 
-    <p class="message">
-      You will always be my fav fat sis 😭💗🫶🏻
-      <br>
-      Love you sooo muchhh! 🥹💕🎀
-      <br>
-      Love you sooo muchhh! 🥹💕
-      <br>
-      No refunds, no returns! 🤣💗
-      <br>
-      I wanna start coding! Putting your finger on the screen
-      doesn't mean you're typing shit, fatass 💩💩🥰🥰
-    </p>
+  <h1>To My Favorite Sis 💕</h1>
 
-    <!-- Keep your original base64 photo here -->
-    <img
-      class="sister-photo"
-      src="PASTE_YOUR_ORIGINAL_BASE64_IMAGE_SOURCE_HERE"
-      alt="A special surprise for my sister"
-    >
+  <p class="message">
+    You will always be my fav fat sis 😭💗🫶🏻
+    <br>
+    Love you sooo muchhh! 🥹💕🎀
+    <br>
+    No refunds, no returns! 🤣💗
+    <br>
+    i wanna start coding" puting ur finger on the sammon
+    dosent mean ur typing shit fatass💩💩🥰🥰
+  </p>
 
-    <p class="message">
-      Love you forever, you silly goose! 🪿💗😂
-    </p>
+  <!-- Your original picture -->
+  <img
+    class="sister-photo"
+    src="data:image/jpeg;base64,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"
+    alt="A special surprise for my sister"
+  >
 
-    <button type="button" onclick="goAgain()">
-      Again! 💕🎀
-    </button>
-  </div>
+  <p class="message">
+    Love you forever, you silly goose! 🪿💗😂
+  </p>
 
-  <script>
-    function showSurprise() {
-      document.getElementById("welcome").classList.add("hidden");
-      document.getElementById("surprise").classList.remove("hidden");
-    }
+  <button type="button" onclick="goAgain()">
+    Again! 💕🎀
+  </button>
+</div>
 
-    function goAgain() {
-      document.getElementById("surprise").classList.add("hidden");
-      document.getElementById("welcome").classList.remove("hidden");
-    }
-  </script>
+<script>
+function showSurprise() {
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("surprise").classList.remove("hidden");
+}
+
+function goAgain() {
+  document.getElementById("surprise").classList.add("hidden");
+  document.getElementById("welcome").classList.remove("hidden");
+}
+</script>
 
 </body>
 </html>
