@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A Surprise for You 💗</title>
+
 <style>
 body {
   margin: 0;
@@ -13,9 +14,10 @@ body {
   place-items: center;
   font-family: Arial, sans-serif;
   text-align: center;
-  background: linear-gradient(135deg,#ffe0ed,#e8ddff);
+  background: linear-gradient(135deg, #ffe0ed, #e8ddff);
   color: #803b62;
 }
+
 .card {
   width: 82%;
   max-width: 420px;
@@ -24,8 +26,15 @@ body {
   background: white;
   box-shadow: 0 10px 40px #c77aa755;
 }
-.emoji { font-size: 65px; }
-h1 { color: #e65391; }
+
+.emoji {
+  font-size: 65px;
+}
+
+h1 {
+  color: #e65391;
+}
+
 button {
   border: 0;
   padding: 15px 22px;
@@ -35,7 +44,15 @@ button {
   font-size: 17px;
   cursor: pointer;
 }
-.hidden { display: none; }
+
+button:hover {
+  background: #d83c82;
+}
+
+.hidden {
+  display: none;
+}
+
 #surprise {
   width: 90%;
   max-width: 650px;
@@ -44,16 +61,27 @@ button {
   background: #21142b;
   color: white;
 }
-#surprise h1 { color: #ff8fc7; }
+
+#surprise h1 {
+  color: #ff8fc7;
+}
+
 iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
   border-radius: 12px;
 }
+
+.fallback a {
+  color: #ff8fc7;
+}
+
 </style>
 </head>
+
 <body>
+
 <div class="card" id="welcome">
   <div class="emoji">🎀</div>
   <h1>Hey, sis! 💗</h1>
@@ -66,21 +94,39 @@ iframe {
 <div id="surprise" class="hidden">
   <h1>HAHAHAHA GOT YOU 💀</h1>
   <p>YOU JUST GOT RICKROLLED 😂</p>
-  <iframe id="video" title="Never Gonna Give You Up"
+
+  <iframe
+    id="video"
+    title="Never Gonna Give You Up"
     allow="autoplay; encrypted-media; picture-in-picture"
-    allowfullscreen></iframe>
+    allowfullscreen>
+  </iframe>
+
+  <div class="fallback">
+    <p>Video not working? 😭</p>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+       target="_blank"
+       rel="noopener noreferrer">
+      CLICK HERE FOR THE SURPRISE 💀
+    </a>
+  </div>
+
   <p>Never gonna let you live this down 😭</p>
   <button onclick="rickroll()">Again 💀</button>
 </div>
 
 <script>
 function rickroll() {
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("surprise").classList.remove("hidden");
+
   document.getElementById("video").src =
-  "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&playsinline=1";
-    "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&playsinline=1";
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&playsinline=1";
+
   document.body.style.background =
-    "linear-gradient(135deg,#25112f,#531c51)";
+    "linear-gradient(135deg, #25112f, #531c51)";
 }
 </script>
+
 </body>
 </html>
