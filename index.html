@@ -1,15 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Surprise for You 💗</title>
+<title>A Surprise for My Fav Sis 💗</title>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+  padding: 20px;
   display: grid;
   place-items: center;
   font-family: Arial, sans-serif;
@@ -19,8 +23,8 @@ body {
 }
 
 .card {
-  width: 82%;
-  max-width: 420px;
+  width: 100%;
+  max-width: 450px;
   padding: 30px 20px;
   border-radius: 25px;
   background: white;
@@ -50,31 +54,35 @@ button:hover {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 #surprise {
-  width: 90%;
-  max-width: 650px;
-  padding: 20px;
-  border-radius: 20px;
-  background: #21142b;
-  color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 20px;
+  border-radius: 25px;
+  background: white;
+  color: #803b62;
+  box-shadow: 0 10px 40px #c77aa755;
 }
 
 #surprise h1 {
-  color: #ff8fc7;
+  color: #e65391;
 }
 
-iframe {
+.sister-photo {
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  border-radius: 12px;
+  max-width: 450px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 18px;
 }
 
-.fallback a {
-  color: #ff8fc7;
+.message {
+  font-size: 21px;
+  line-height: 1.7;
 }
 
 </style>
@@ -83,48 +91,52 @@ iframe {
 <body>
 
 <div class="card" id="welcome">
-  <div class="emoji">🎀</div>
-  <h1>Hey, sis! 💗</h1>
-  <p>I made a tiny surprise just for you! 🥹💕</p>
-  <p>You HAVE to open it. No cheating! 🤭</p>
-  <button onclick="rickroll()">Open your surprise 🎁</button>
-  <p>Made with love 💖</p>
+  <div class="emoji">🎀💗</div>
+  <h1>Hey, sis! 🥹💕</h1>
+  <p>I made a tiny surprise just for you! 🌸💖</p>
+  <p>You HAVE to open it. No cheating! 🤭🎁</p>
+
+  <button onclick="showSurprise()">
+    Open your surprise 🎁💗
+  </button>
+
+  <p>Made with love 💖✨</p>
 </div>
 
 <div id="surprise" class="hidden">
-  <h1>HAHAHAHA GOT YOU 💀</h1>
-  <p>YOU JUST GOT RICKROLLED 😂</p>
+  <div class="emoji">💗🥹🫶🏻</div>
 
-  <iframe
-    id="video"
-    title="Never Gonna Give You Up"
-    allow="autoplay; encrypted-media; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+  <h1>To My Favorite Sis 💕</h1>
 
-  <div class="fallback">
-    <p>Video not working? 😭</p>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-       target="_blank"
-       rel="noopener noreferrer">
-      CLICK HERE FOR THE SURPRISE 💀
-    </a>
-  </div>
+  <p class="message">
+    You will always be my fav fat sis 😭💗🫶🏻
+    <br>
+    Love you sooo muchhh! 🥹💕🎀
+    <br>
+    You're stuck with me foreverrr 😂💖
+    <br>
+    No refunds, no returns! 🤣💗
+  </p>
 
-  <p>Never gonna let you live this down 😭</p>
-  <button onclick="rickroll()">Again 💀</button>
+  <img
+    class="sister-photo"
+    src="data:image/jpeg;base64,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"
+    alt="A special surprise for my sister">
+
+  <p class="message">
+    Love you forever, you silly goose! 🪿💗😂
+  </p>
+
+  <button onclick="showSurprise()">Again! 💕🎀</button>
 </div>
 
 <script>
-function rickroll() {
+function showSurprise() {
   document.getElementById("welcome").classList.add("hidden");
   document.getElementById("surprise").classList.remove("hidden");
 
-  document.getElementById("video").src =
-    "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&playsinline=1";
-
   document.body.style.background =
-    "linear-gradient(135deg, #25112f, #531c51)";
+    "linear-gradient(135deg, #ffe0ed, #e8ddff)";
 }
 </script>
 
